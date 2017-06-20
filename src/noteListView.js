@@ -1,15 +1,15 @@
 (function(exports) {
   function NoteListView(noteList) {
     this.displayNotesArray = noteList
-    this.string = ""
   };
 
-  NoteListView.prototype.htmlView = function(array) {
-    var list = this.displayNotesArray;
-    list.notes.forEach(function(entry) {
-      console.log("<li><div>" + entry.text + "</div></li>");
-      return("Hello " + entry.text);
+  NoteListView.prototype.htmlView = function() {
+    var list = "<ul>";
+    this.displayNotesArray.notes.forEach(function(entry) {
+      list += ("<li><div>" + entry.text + "</div></li>");
     });
+    list += "</ul>"
+    return list;
   }
 
   exports.NoteListView = NoteListView;
