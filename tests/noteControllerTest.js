@@ -8,6 +8,23 @@
     }
   };
 
+  function testhtmlConverter () {
+    function appDouble () {
+      this.innerHTML = null;
+    }
+    var app = new appDouble();
+    var notelist = new NoteList;
+    notelist.addToList("Gandalf's hat");
+    var notecontroller = new NoteController(notelist);
+    notecontroller.htmlConverter(app);
+    if(app.innerHTML !== "<ul><li><div>Gandalf's hat</div></li></ul>"){
+      throw new Error("I am hatless");
+    }else{
+      console.log("Bob's your uncle")
+    }
+  };
+
   testNoteController();
+  testhtmlConverter();
 
 })(this);
