@@ -6,6 +6,9 @@
     if (noteList.viewNotes()[0].text !== "Hello") {
       throw new Error("Note list does not contain note")
     }
+    else {
+      console.log("testListForOneNote - Test passed :-)")
+    }
 
 
   };
@@ -15,6 +18,9 @@
     noteList.addToList("Goodbye")
     if (noteList.viewNotes()[1].text !== "Goodbye") {
       throw new Error("Note list does not contain note")
+    }
+    else {
+      console.log("testListForMultipleNotes - Test passed :-)")
     }
   };
   testListForOneNote();

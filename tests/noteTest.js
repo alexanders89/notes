@@ -4,6 +4,8 @@
 
     if (note.text !== "Mary Berry") {
       throw new Error("Note has incorrect text!")
+    } else {
+      console.log("testNoteText - Test passed :-)")
     }
   };
 

@@ -13,6 +13,9 @@
       console.log(noteListView)
       throw new Error("Not correct HTML view")
     }
+    else {
+      console.log("testNoteListView - Test passed :-)")
+    }
   };
 
   testNoteListView();
